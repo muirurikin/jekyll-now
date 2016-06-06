@@ -1,5 +1,5 @@
 ---
-layout:
+layout:posts
 title:4 Principles of O-O-P
 ---
 #1. Encapsulation:
