@@ -1,7 +1,8 @@
 ---
-layout:posts
-title:4 Principles of O-O-P
+layout: post
+title: 4 principles of OOP.
 ---
+
 #1. Encapsulation:
 Encapsulation means that the internal representation of an object is generally hidden from view outside of the object’s definition. Typically, only the object’s own methods can directly inspect or manipulate its fields.</p>
 
