@@ -143,5 +143,3 @@ Now that your blog post is published, it’s time to let the world about it. Her
 
     - [Twitter](https://twitter.com) – use hashtags sparingly and mention relevant accounts
     - [Google+](https://google.com/plus) – be sure to share with the relevant communities.
-
-- Link from your own personal blog if it’s published on your company blog
