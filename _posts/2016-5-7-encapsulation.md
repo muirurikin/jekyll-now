@@ -6,6 +6,7 @@ title: Encapsulation
 
 Accessors (also known as getters and setters) are methods that let you read and write the value of an instance variable of an object.
 
+```java
 publicclassAccessorExample {
 
 privateStringattribute; 
@@ -23,6 +24,7 @@ this.attribute=attribute;
   }
 
 }
+```
 
 #### Why Accessors?
 
@@ -46,6 +48,7 @@ Now this sometimes makes people uncomfortable because they've been told not to h
 
 Consider the example below
 
+```java
 publicclassA {
 
 publicinta;
@@ -71,13 +74,13 @@ returnthis.a;
   }
 
 }
-
+```
 It is argued that this encapsulates the attribute. Now is this really encapsulation?
 
 Fact is, Getters/setters have nothing to do with encapsulation. Here the data isn't more hidden or encapsulated than it was in a public field. Other objects still have intimate knowledge of the internals of the class. Changes made to the class might ripple out and enforce changes in dependent classes. Getter and setter in this way are generally break encapsulation. A truly well-encapsulated class has no setters and preferably no getters either. Rather than asking a class for some data and then compute something with it, the class should be responsible to compute something with its data and then return the result.
 
 Consider an example below,
-
+```java
 publicclassScreens {
 
 privateMapscreens=newHashMap(); 
@@ -97,7 +100,7 @@ this.screens=screens;
 // remaining code here
 
 }
-
+```
 If we need to get a particular screen, we do code like below,
 
 Screens= (Screen)screens.get(screenId);
@@ -107,7 +110,7 @@ There are things worth noticing here....
 The client needs to get an Object from the Map and casting it to the right type. Moreover, the worst is that any client of the Map has the power to clear it which may not be the case we usually want.
 
 Alternative implementation of the same logic is:
-
+```java
 publicclassScreens {
 
 privateMapscreens=newHashMap(); 
@@ -121,7 +124,7 @@ return (Screen) screens.get(id);
 // remaining code here
 
 }
-
+```
 Here the Map instance and the interface at the boundary (Map) are hidden.
 
 #### Conclusions
